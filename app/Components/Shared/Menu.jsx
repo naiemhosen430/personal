@@ -1,9 +1,15 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { MdReorder } from "react-icons/md";
 
 export default function Menu() {
   const [menuBox, setMenuBox] = useState(false);
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   // onclick hundler
   const toggleMenuBox = () => {
@@ -15,17 +21,20 @@ export default function Menu() {
   };
   return (
     <>
-      <div className="flex justify-center items-center py-2 px-4">
+      <div className="flex sticky top-0 bg-white z-20 justify-center items-center py-2 px-4">
         <div className="lg:w-3/12 w-5/12">
           <Link href={"/"} className="font-bold block text-2xl">
             Name
           </Link>
         </div>
 
-        <div className="lg:w-6/12 hidden lg:flex items-center shadow-md rounded-md justify-center">
+        <div
+          data-aos="fade-right"
+          className="lg:w-6/12 hidden z-20 lg:flex items-center shadow-md rounded-md justify-center"
+        >
           <Link
             className="py-2 px-4 text-center rounded-md hover:bg-slate-500 text-slate-700 font-bold block"
-            href={"/"}
+            href={"/service"}
           >
             Service
           </Link>
@@ -83,19 +92,19 @@ export default function Menu() {
 
         <div
           onClick={toggleMenuBox}
-          className="w-3/12 lg:hidden font-bold bg-slate-900 text-white py-2 px-4 rounded-md hover:bg-slate-800"
+          className="w-3/12 lg:hidden text-center font-bold text-black p-2 py-0 rounded-md hover:bg-slate-400"
         >
-          Menu
+          <MdReorder className="text-4xl inline-block" />
         </div>
       </div>
 
       {menuBox && (
-        <div className="h-screen">
+        <div className="h-screen" data-aos="fade-right">
           <div className="shadow-md rounded-md">
             <Link
               className="py-2 px-4 rounded-md hover:bg-slate-500 text-slate-700 font-bold block"
-              href={"/"}
               onClick={toggleMenuBox}
+              href={"/service"}
             >
               Service
             </Link>
