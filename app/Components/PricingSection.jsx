@@ -41,7 +41,7 @@ export default function PricingSection() {
               <MdOutlineDone className="text-2xl text-white" />
               <h1 className="text-xl text-white font-bold">Budget Bliss</h1>
             </div>
-            <div className="text-center p-10 py-20 pb-0">
+            <div className="text-center py-20 pb-0">
               <Link
                 className="text-xl hover:bg-slate-900 hover:text-white p-4 px-8 bg-slate-400 rounded-lg font-bold"
                 href={"/"}
@@ -81,7 +81,7 @@ export default function PricingSection() {
               <MdOutlineDone className="text-2xl text-white" />
               <h1 className="text-xl text-white font-bold">Premium Picks</h1>
             </div>
-            <div className="text-center p-10 py-20 pb-0">
+            <div className="text-center py-20 pb-0">
               <Link
                 className="text-xl hover:bg-slate-900 hover:text-white p-4 px-8 bg-slate-400 rounded-lg font-bold"
                 href={"/"}
@@ -127,7 +127,7 @@ export default function PricingSection() {
               <MdOutlineDone className="text-2xl text-white" />
               <h1 className="text-xl text-white font-bold">Signature Select</h1>
             </div>
-            <div className="text-center p-10 py-20 pb-0">
+            <div className="text-center py-20 pb-0">
               <Link
                 className="text-xl hover:bg-slate-900 hover:text-white p-4 px-8 bg-slate-400 rounded-lg font-bold"
                 href={"/"}
